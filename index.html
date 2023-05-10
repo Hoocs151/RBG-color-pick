@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <label for="red">
+                R
+            </label>
+            <input type="range" id="red" min="0" max="255" value="0" />
+        </div>
+        <div class="wrapper">
+            <label for="green">
+                G
+            </label>
+            <input type="range" id="green" min="0" max="255" value="0" />
+        </div>
+        <div class="wrapper">
+            <label for="blue">
+                B
+            </label>
+            <input type="range" id="blue" min="0" max="255" value="0" />
+        </div>
+        <div class="result">
+            <input type="text" readonly value="rgb(0,0,0)" />
+            <span class="hex-code">#000000</span>
+            <button id="copy-btn">
+                <i class="far fa-copy"></i>Copy Color Code
+            </button>
+            <button id="random-btn">
+                <i class="fas fa-random"></i>Random Color
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

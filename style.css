@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Set body background */
+body {
+    background: #142b37;
+}
+
+/* Set container styles */
+.container {
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    padding: 4em 2em;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    color: #142b37;
+    font-weight: 600;
+    border-radius: 0.5em;
+    display: grid;
+    justify-content: center;
+    box-shadow: 0 2em 3em rgba(0, 0, 0, 0.2);
+}
+
+/* Set styles for color sliders */
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2.2em;
+}
+
+label {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-right: 0.5em;
+}
+
+input[type="range"] {
+    width: 100%;
+    background: transparent;
+}
+
+.wrapper input[type="range"]:focus + label {
+    color: #0075ff;
+}
+
+/* Set styles for result section */
+.result {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+}
+
+.result input[type="text"]:focus {
+    background-color: #d2d2d2;
+} 
+
+/* Set styles for color code input and copy button */
+input[type="text"],
+button {
+    font-size: 1em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    padding: 1.2em 0.5em;
+}
+
+input[type="text"] {
+    background: #ebeaea;
+    text-align: center;
+    color: #142b37;
+}
+
+input[type="text"]::selection {
+    background: transparent;
+}
+
+button {
+    background: #0075ff;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1.2em 1em;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0055cc;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #0055cc;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0075ff;
+}
+
+/* Set styles for hex code */
+.hex-code {
+    font-size: 1.2em;
+    text-align: center;
+    color: #6c757d;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hex-code:hover {
+    background-color: #d2d2d2;
+} 
+
+#random-btn:hover {
+    background-color: #d2d2d2;
+} 
+
+/* Set styles for color sliders */
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2.2em;
+}
+
+label {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-right: 0.5em;
+}
+
+input[type="range"] {
+    width: 100%;
+    background: transparent;
+}
+
+.wrapper input[type="range"]:focus + label {
+    color: #0075ff;
+}
+
+/* Set styles for result section */
+.result {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+}
+
+.result input[type="text"]:focus {
+    background-color: #d2d2d2;
+} 
+
+/* Set styles for color code input and copy button */
+input[type="text"],
+button {
+    font-size: 1em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    padding: 1.2em 0.5em;
+}
+
+input[type="text"] {
+    background: #ebeaea;
+    text-align: center;
+    color: #142b37;
+}
+
+input[type="text"]::selection {
+    background: transparent;
+}
+
+button {
+    background: #0075ff;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1.2em 1em;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #0055cc;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #0055cc;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0075ff;
+}
+
+/* Set styles for hex code */
+.hex-code {
+    font-size: 1.2em;
+    text-align: center;
+    color: #6c757d;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hex-code:hover {
+    background-color: #fff;
+} 
+
+#random-btn:hover {
+    background-color: #0055cc;
+} 
+
+/* Set styles for copy button */
+#copy-btn {
+    background-color: #0075ff;
+    color: #fff;
+    border-radius: 0.5em;
+    border: none;
+    padding: 1.2em 1em;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    transition: all 0.3s ease;
+}
+
+#copy-btn:hover {
+    background-color: #0055cc;
+    cursor: pointer;
+}
+
+#copy-btn:active {
+    background-color: #0055cc;
+}
+
+#copy-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0075ff;
+}
