@@ -8,6 +8,25 @@ const rColor = document.getElementById("red")
 const gColor = document.getElementById("green")
 const bColor = document.getElementById("blue")
 
+const colorPicker = document.querySelector("#color-picker")
+
+const pickColor = () => {
+    const hex = colorPicker.value
+    const rgb = hexToRgb(hex)
+    rColor.value = rgb.r
+    gColor.value = rgb.g
+    bColor.value = rgb.b
+    generateColor()
+}
+
+const hexToRgb = (hex) => {
+    const r = parseInt(hex.substring(1,3), 16)
+    const g = parseInt(hex.substring(3,5), 16)
+    const b = parseInt(hex.substring(5,7), 16)
+    return { r, g, b }
+}
+
+colorPicker.addEventListener("change", pickColor)
 
 const generateColor = () => {
     let rColorValue = rColor.value
