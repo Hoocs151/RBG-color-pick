@@ -3,7 +3,6 @@ const hexCode = document.querySelector(".hex-code")
 const copyBtn = document.querySelector("#copy-btn")
 const randomBtn = document.querySelector("#random-btn")
 const sliders = document.querySelectorAll(".wrapper input[type='range']")
-// console.log(slider);
 const rColor = document.getElementById("red")
 const gColor = document.getElementById("green")
 const bColor = document.getElementById("blue")
@@ -18,6 +17,19 @@ const pickColor = () => {
     bColor.value = rgb.b
     generateColor()
 }
+
+const hexInput = document.querySelector("#hex-input")
+
+const updateColorFromHex = () => {
+    const hex = hexInput.value
+    const rgb = hexToRgb(hex)
+    rColor.value = rgb.r
+    gColor.value = rgb.g
+    bColor.value = rgb.b
+    generateColor()
+}
+
+hexInput.addEventListener("input", updateColorFromHex)
 
 const hexToRgb = (hex) => {
     const r = parseInt(hex.substring(1,3), 16)
