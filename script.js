@@ -53,11 +53,12 @@ const generateColor = () => {
 
 const copyColor = () => {
     result.select()
-    // document.execCommand("copy")
     navigator.clipboard.writeText(result.value)
     copyBtn.innerHTML = "Copied"
+    copyBtn.classList.add("animate")
     setTimeout(() => {
         copyBtn.innerHTML = '<i class="far fa-copy"></i>Copy Color Code'
+        copyBtn.classList.remove("animate")
     }, 1000)
 }
 

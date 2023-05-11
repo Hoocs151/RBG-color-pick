@@ -28,7 +28,6 @@ body,
     box-shadow: 0 2em 3em rgba(0, 0, 0, 0.2);
 }
 
-/* Set styles for color sliders */
 .wrapper {
     width: 100%;
     display: flex;
@@ -52,7 +51,6 @@ input[type="range"] {
     color: #0075ff;
 }
 
-/* Set styles for result section */
 .result {
     width: 100%;
     display: grid;
@@ -110,7 +108,6 @@ button:focus {
     box-shadow: 0 0 0 2px #0075ff;
 }
 
-/* Set styles for hex code */
 .hex-code {
     font-size: 1.2em;
     text-align: center;
@@ -124,10 +121,28 @@ button:focus {
 } 
 
 #random-btn:hover {
-    background-color: #d2d2d2;
-} 
+    background-color: #0055cc;
+    animation: shake 0.5s;
+  }
 
-/* Set styles for color sliders */
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 .wrapper {
     width: 100%;
     display: flex;
@@ -151,7 +166,6 @@ input[type="range"] {
     color: #0075ff;
 }
 
-/* Set styles for result section */
 .result {
     width: 100%;
     display: grid;
@@ -209,7 +223,6 @@ button:focus {
     box-shadow: 0 0 0 2px #0075ff;
 }
 
-/* Set styles for hex code */
 .hex-code {
     font-size: 1.2em;
     text-align: center;
@@ -220,7 +233,21 @@ button:focus {
 
 .hex-code:hover {
     background-color: #fff;
+    animation: highlight 0.5s;
+
 } 
+
+@keyframes highlight {
+    0% {
+      background-color: #fff;
+    }
+    50% {
+      background-color: #d2d2d2;
+    }
+    100% {
+      background-color: #fff;
+    }
+  }
 
 #random-btn:hover {
     background-color: #0055cc;
@@ -238,7 +265,7 @@ button:focus {
     align-items: center;
     justify-content: center;
     gap: 0.5em;
-    transition: all 0.3s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 #copy-btn:hover {
@@ -248,6 +275,7 @@ button:focus {
 
 #copy-btn:active {
     background-color: #0055cc;
+    transition: background-color 0s;
 }
 
 #copy-btn:focus {
@@ -278,4 +306,20 @@ button:focus {
     -webkit-appearance: none;
     border-radius: 50%;
     cursor: pointer;
+}
+
+@keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+#copy-btn.animate {
+    animation: buttonAnimation 0.5s;
 }
